@@ -27,15 +27,6 @@ function App() {
     console.log("New Data",newTodos)
   }
 
-  //   const deleteTodo = (newTodo) => {
-  //   setTodos(newTodo);
-  // }
-
-  // const deleteTodo = (index) => {
-  //   const newTodos = [...todos];
-  //   newTodos.splice(index, 1);
-  //   setTodos(newTodos);
-  // }
 
   return(
     <Provider store={store}>  
@@ -46,8 +37,6 @@ function App() {
           <div className="todo-list">
             {todos.map((todo, index) => (
                 <ToDo key={index} index={index} todo={todo}/>
-                // <ToDo key={index} index={index} todo={todo} handleDeleteTodo={deleteTodo}/> optoptoptopt
-                // <ToDo key={index} index={index} todo={todo} deleteTodo={deleteTodo} />
             ))}
 
           <TodoForm handleSubmitSave={submitSave} />

@@ -1,5 +1,5 @@
 import React from 'react';
-import { ADD_TODO, DELETE_TODO } from '../actions/types';
+import { ADD_TODO } from '../actions/types';
 
 const initialState = {
     todo: []
@@ -14,14 +14,6 @@ export default function(state= initialState, action) {
                 ...state,
                 todo: [...state.todo, payload]
             };
-
-        // case DELETE_TODO:
-        //     // const filteredTodos = state.todo.filter(tudu => tudu.index !== payload)
-        //     return {
-        //         ...state.todo.splice(payload, 1)
-        //         // ...state,
-        //         // todo: filteredTodos
-        //     }
 
         default:
             return state;
